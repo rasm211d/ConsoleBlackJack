@@ -28,7 +28,11 @@ public class Client implements Constants{
             while (true) {
                 scanner = new Scanner(System.in);
                 int number = (int) (Math.random() * (11 - 1)) + 1;
+                int number2 = (int) (Math.random() * (10 - 1)) + 1;
                 System.out.println("Your first number: " + number);
+                System.out.println("Your second number: " + number2);
+                number += number2;
+                System.out.println("Your number is: " + number);
 
                 while (true) {
                     System.out.println("Write hit for another number, write stay to stop");
@@ -39,7 +43,7 @@ public class Client implements Constants{
                         number += number1;
                         System.out.println("Your number is: " + number);
                         if (number > 21) {
-                            System.out.println("You hit too hard and your number is now: " + number);
+                            System.out.println("You hit too hard and your number is now: " + number + "YOU ARE OUT!!!");
                             try {
                                 dataOutputStream.writeInt(number);
                             } catch (IOException e) {

@@ -75,23 +75,23 @@ public class MultiThreadedServer {
                         break;
                     } else if (player1Hand > 21 && player2Hand < 21) {
                         toPlayer1.writeUTF("player 1 got: " + player1Hand + " and player 2 got: " + player2Hand + ". Player 2 won the game");
-                        toPlayer2.writeUTF("player 1 got: " + player1Hand + " and player2 got : " + player2Hand + ". Player 2 won the game");
+                        toPlayer2.writeUTF("player 1 got: " + player1Hand + " and player 2 got : " + player2Hand + ". Player 2 won the game");
                         break;
                     } else if (player2Hand > 21 && player1Hand < 21) {
-                        toPlayer1.writeUTF("player 1 got: " + player1Hand + " and player2 got : " + player2Hand + ". Player 1 won the game");
-                        toPlayer2.writeUTF("player 1 got: " + player1Hand + " and player2 got : " + player2Hand + ". Player 1 won the game");
+                        toPlayer1.writeUTF("player 1 got: " + player1Hand + " and player 2 got : " + player2Hand + ". Player 1 won the game");
+                        toPlayer2.writeUTF("player 1 got: " + player1Hand + " and player 2 got : " + player2Hand + ". Player 1 won the game");
                         break;
                     } else if (player1Hand == player2Hand) {
-                        toPlayer1.writeUTF("player 1 got: " + player1Hand + " and player2 got : " + player2Hand + ". ITS A DRAW!!!");
-                        toPlayer2.writeUTF("player 1 got: " + player1Hand + " and player2 got : " + player2Hand + ". ITS A DRAW!!!");
+                        toPlayer1.writeUTF("player 1 got: " + player1Hand + " and player 2 got : " + player2Hand + ". ITS A DRAW!!!");
+                        toPlayer2.writeUTF("player 1 got: " + player1Hand + " and player 2 got : " + player2Hand + ". ITS A DRAW!!!");
                         break;
                     } else if (player1Hand > player2Hand) {
-                        toPlayer1.writeUTF("player 1 got: " + player1Hand + " and player2 got : " + player2Hand + ". Player 1 won the game");
-                        toPlayer2.writeUTF("player 1 got: " + player1Hand + " and player2 got : " + player2Hand + ". Player 1 won the game");
+                        toPlayer1.writeUTF("player 1 got: " + player1Hand + " and player 2 got : " + player2Hand + ". Player 1 won the game");
+                        toPlayer2.writeUTF("player 1 got: " + player1Hand + " and player 2 got : " + player2Hand + ". Player 1 won the game");
                         break;
                     } else {
-                        toPlayer1.writeUTF("player 1 got: " + player1Hand + " and player2 got : " + player2Hand + ". Player 2 won the game");
-                        toPlayer2.writeUTF("player 1 got: " + player1Hand + " and player2 got : " + player2Hand + ". Player 2 won the game");
+                        toPlayer1.writeUTF("player 1 got: " + player1Hand + " and player 2 got : " + player2Hand + ". Player 2 won the game");
+                        toPlayer2.writeUTF("player 1 got: " + player1Hand + " and player 2 got : " + player2Hand + ". Player 2 won the game");
                         break;
                     }
                 }

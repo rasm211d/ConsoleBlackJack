@@ -35,18 +35,22 @@ public class Client2 implements Constants{
             while (true) {
                 scanner = new Scanner(System.in);
                 int number = (int) (Math.random() * (11 - 1)) + 1;
+                int number2 = (int) (Math.random() * (10 - 1)) + 1;
                 System.out.println("Your first number: " + number);
+                System.out.println("Your second number: " + number2);
+                number += number2;
+                System.out.println("Your number is: " + number);
 
                 while (true) {
                     System.out.println("Write hit for another number, write stay to stop");
                     String input = scanner.nextLine();
                     if (input.equalsIgnoreCase("hit")) {
-                        int number1 = (int) (Math.random() * (11 - 1)) + 1;
-                        System.out.println("You got number: " + number1);
-                        number += number1;
+                        int hitNumber = (int) (Math.random() * (11 - 1)) + 1;
+                        System.out.println("You got number: " + hitNumber);
+                        number += hitNumber;
                         System.out.println("Your number is: " + number);
                         if (number > 21) {
-                            System.out.println("You hit too hard and your number is now: " + number);
+                            System.out.println("You hit too hard and your number is now: " + number + "YOU ARE OUT!!!!");
                             try {
                                 dataOutputStream.writeInt(number);
                             } catch (IOException e) {
